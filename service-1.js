@@ -1,15 +1,14 @@
 require("./tracing").initTelemetry("service-1")
 const otelApi = require("@opentelemetry/api")
-const express = require('express')
+const express = require("express")
 const axios = require("axios")
-const { doWork } = require("./do-work")
 
 const app = express()
 const port = 3000
 
 const tracer = otelApi.trace.getTracer("service-1")
 
-app.get('/', async function (req, res) {
+app.get("/", async function (req, res) {
     const span = tracer.startSpan("service-1|get /")
 
     const result = await axios.get("http://localhost:3001")

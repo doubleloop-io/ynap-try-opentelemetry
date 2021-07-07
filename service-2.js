@@ -1,6 +1,6 @@
 require("./tracing").initTelemetry("service-2")
 const otelApi = require("@opentelemetry/api")
-const express = require('express')
+const express = require("express")
 const { doWork } = require("./do-work")
 
 const app = express()
@@ -8,9 +8,9 @@ const port = 3001
 
 const tracer = otelApi.trace.getTracer("service-2")
 
-app.get('/', async function (req, res) {
+app.get("/", async function (req, res) {
     const span = tracer.startSpan("service-2|get /")
-    const ctx = otelApi.trace.setSpan(otelApi.context.active(), span);
+    const ctx = otelApi.trace.setSpan(otelApi.context.active(), span)
 
     const duration = await otelApi.context.with(ctx, async () => {
         return await doWork()
