@@ -1,4 +1,6 @@
+// NOTE: this must be the first line you import
 require("./tracing").initTelemetry("service-1")
+
 const otelApi = require("@opentelemetry/api")
 const express = require("express")
 const axios = require("axios")
