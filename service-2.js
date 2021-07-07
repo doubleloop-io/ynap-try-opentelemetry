@@ -18,9 +18,6 @@ app.get("/", async function (req, res) {
         return await doWork()
     })
 
-    //const doWorkWrapped = wrapWithTelemetry(doWork)
-    //await doWorkWrapped()
-
     res.send({ hello: "World", duration })
 
     span.end()
