@@ -1,6 +1,6 @@
 #!/usr/local/bin/bash
 
-docker run --name jaeger \
+docker run --rm --name jaeger \
   -e COLLECTOR_ZIPKIN_HOST_PORT=:9411 \
   -p 5775:5775/udp \
   -p 6831:6831/udp \
