@@ -16,3 +16,6 @@ curl localhost:3000
 ```
 
 and open the browser at `localhost:16686`, you should see the jaeger UI
+
+### TODO
+- [ ] add React UI
