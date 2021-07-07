@@ -1,0 +1,23 @@
+{
+  "name": "try-opentelemetry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@opentelemetry/api": "^1.0.1",
+    "@opentelemetry/auto-instrumentations-node": "^0.23.0",
+    "@opentelemetry/core": "^0.23.0",
+    "@opentelemetry/exporter-jaeger": "^0.23.0",
+    "@opentelemetry/instrumentation": "^0.23.0",
+    "@opentelemetry/node": "^0.23.0",
+    "@opentelemetry/tracing": "^0.23.0",
+    "axios": "^0.21.1",
+    "express": "^4.17.1"
+  }
+}
